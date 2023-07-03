@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	binarysearch "github.com/PouriaSeyfi/go-algorithms/binary_search"
+	quicksort "github.com/PouriaSeyfi/go-algorithms/quick_sort"
 	selectionsort "github.com/PouriaSeyfi/go-algorithms/selection_sort"
 )
 
@@ -18,8 +19,13 @@ func main() {
 
 
 	// Selection Sort
-	unsortedArr := []int{64, 25, 12, 22, 11}
-	selectionsort.SelectionSort(unsortedArr)
-	fmt.Println(unsortedArr) // Output: [11 12 22 25 64]
+	unsortedArr1 := []int{64, 25, 12, 22, 11}
+	selectionsort.SelectionSort(unsortedArr1)
+	fmt.Println(unsortedArr1) // Output: [11 12 22 25 64]
 
+
+	// Quick Sort
+	unsortedArr2 := []int{75, 22, 11, 17, 19}
+	quicksort.QuickSort(unsortedArr2)
+	fmt.Println(unsortedArr2) // Output: [12 17 19 22 75]
 }
