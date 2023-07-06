@@ -7,9 +7,12 @@ import (
 	bfs "github.com/PouriaSeyfi/go-algorithms/breath_first_search"
 	quicksort "github.com/PouriaSeyfi/go-algorithms/quick_sort"
 	selectionsort "github.com/PouriaSeyfi/go-algorithms/selection_sort"
+	mergesort "github.com/PouriaSeyfi/go-algorithms/merge_sort"
 )
 
 func main() {
+
+
 
 	fmt.Println("----------- Binary Search ----------")
 
@@ -21,18 +24,22 @@ func main() {
 
 	//----------------------------------------------
 	fmt.Println("---------- Selection Sort ----------")
-
-	unsortedArr1 := []int{64, 25, 12, 22, 11}
-	selectionsort.SelectionSort(unsortedArr1)
-	fmt.Printf("%v\n", unsortedArr1) // Output: [11 12 22 25 64]
+	arr1 := []int{64, 25, 12, 22, 11}
+	selectionsort.SelectionSort(arr1)
+	fmt.Printf("%v\n", arr1) // Output: [11 12 22 25 64]
 
 	//----------------------------------------------
 	fmt.Println("---------- Quick Sort ----------")
-	unsortedArr2 := []int{75, 22, 11, 17, 19}
-	quicksort.QuickSort(unsortedArr2)
-	fmt.Printf("%v\n", unsortedArr2) // Output: [12 17 19 22 75]
+	arr2 := []int{75, 22, 11, 17, 19}
+	quicksort.QuickSort(arr2)
+	fmt.Printf("%v\n", arr2) // Output: [12 17 19 22 75]
 
 	//----------------------------------------------
+	fmt.Println("---------- Merge Sort ----------")
+	arr3 := []int{9, 5, 1, 3, 8, 4, 2, 7, 6}
+	mergesort.MergeSort(arr3)
+	fmt.Printf("%v\n", arr3) // Output: [1 2 3 4 5 6 7 8 9]
+
 	fmt.Println("--------- Breadth-First Search ----------")
 	// Breadth-First Search
 	// Create a social network graph for testing
