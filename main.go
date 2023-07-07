@@ -5,14 +5,12 @@ import (
 
 	binarysearch "github.com/PouriaSeyfi/go-algorithms/binary_search"
 	bfs "github.com/PouriaSeyfi/go-algorithms/breath_first_search"
+	mergesort "github.com/PouriaSeyfi/go-algorithms/merge_sort"
 	quicksort "github.com/PouriaSeyfi/go-algorithms/quick_sort"
 	selectionsort "github.com/PouriaSeyfi/go-algorithms/selection_sort"
-	mergesort "github.com/PouriaSeyfi/go-algorithms/merge_sort"
 )
 
 func main() {
-
-
 
 	fmt.Println("----------- Binary Search ----------")
 
@@ -21,6 +19,11 @@ func main() {
 
 	index := binarysearch.BinarySearch(arr, target)
 	fmt.Println(index) // Output: 5
+
+	descArr := []int{7, 6, 3, 2, 1}
+	r := binarysearch.BinarySearchInDescendingArray(descArr, 1)
+
+	fmt.Printf("%v\n", r) // Output: 4
 
 	//----------------------------------------------
 	fmt.Println("---------- Selection Sort ----------")
