@@ -1,38 +1,23 @@
 package quicksort
 
-func QuickSort(arr []int) {
+func QuickSort(arr []int) []int {
 	if len(arr) <= 1 {
-		return
+		return arr
 	}
 
-	// Choose the last element as the pivot
 	pivot := arr[len(arr)-1]
-	left := 0
-	right := len(arr) - 2
+	var left, right []int
 
-	// Partitioning step
-	for left <= right {
-
-		// Find an element on the left side that is greater than the pivot
-		if arr[left] > pivot && arr[right] < pivot {
-			arr[left], arr[right] = arr[right], arr[left]
-		}
-
-		// Find an element on the right side that is smaller than the pivot
-		if arr[left] <= pivot {
-			left++
-		}
-
-		// Swap the elements if necessary
-		if arr[right] >= pivot {
-			right--
+	for i := 0; i < len(arr)-1; i++ {
+		if arr[i] < pivot {
+			left = append(left, arr[i])
+		} else {
+			right = append(right, arr[i])
 		}
 	}
 
-	// Place the pivot in its correct position
-	arr[left], arr[len(arr)-1] = arr[len(arr)-1], arr[left]
+	left = QuickSort(left)
+	right = QuickSort(right)
 
-	// Recursive calls on the sub-arrays
-	QuickSort(arr[:left])   // Sort elements smaller than the pivot
-	QuickSort(arr[left+1:]) // Sort elements greater than the pivot
+	return append(append(left, pivot), right...)
 }

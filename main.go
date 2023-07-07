@@ -34,7 +34,7 @@ func main() {
 	//----------------------------------------------
 	fmt.Println("---------- Quick Sort ----------")
 	arr2 := []int{75, 22, 11, 17, 19}
-	quicksort.QuickSort(arr2)
+	arr2 = quicksort.QuickSort(arr2)
 	fmt.Printf("%v\n", arr2) // Output: [12 17 19 22 75]
 
 	//----------------------------------------------
