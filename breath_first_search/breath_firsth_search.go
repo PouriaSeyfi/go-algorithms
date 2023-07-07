@@ -3,7 +3,6 @@ package breathfirstsearch
 type Person struct {
 	Name     string
 	Friends  []*Person
-	Visited  bool
 }
 
 func BreadthFirstSearch(root *Person, name string) *Person {
