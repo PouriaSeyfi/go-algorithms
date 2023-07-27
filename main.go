@@ -5,6 +5,7 @@ import (
 
 	binarysearch "github.com/PouriaSeyfi/go-algorithms/binary_search"
 	bfs "github.com/PouriaSeyfi/go-algorithms/breath_first_search"
+	bucketsort "github.com/PouriaSeyfi/go-algorithms/bucket_sort"
 	insertionsort "github.com/PouriaSeyfi/go-algorithms/insertion_sort"
 	mergesort "github.com/PouriaSeyfi/go-algorithms/merge_sort"
 	quicksort "github.com/PouriaSeyfi/go-algorithms/quick_sort"
@@ -12,6 +13,8 @@ import (
 )
 
 func main() {
+
+
 
 	fmt.Println("----------- Binary Search ----------")
 
@@ -49,6 +52,11 @@ func main() {
 	arr4 := []int{9, 5, 1, 3, 8, 4, 2, 7, 6}
 	insertionsort.InsertionSort(arr4)
 	fmt.Printf("%v\n", arr4) // Output: [1 2 3 4 5 6 7 8 9]
+
+	fmt.Println("----------- Bucket Sort ----------")
+	unsortedArrForBucketSorting := []int{1, 0, 2, 0, 1}
+	sortedArrForBucketSorting := bucketsort.BucketSort(unsortedArrForBucketSorting)
+	fmt.Printf("%v\n", sortedArrForBucketSorting) // Output: {0,0,1,1,2}
 
 	fmt.Println("--------- Breadth-First Search ----------")
 	// Breadth-First Search
